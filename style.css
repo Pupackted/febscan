@@ -1,0 +1,49 @@
+:root {
+  --bg: #fff7fa;
+  --card: #ffffff;
+  --ink: #3a2430;
+  --muted: #8a6b7a;
+  --pink: #e0457b;
+  --soft: #ffd9e6;
+  --lav: #b794f6;
+  --grad: linear-gradient(135deg, #ff7eb3, #b794f6);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1d1319;
+    --card: #261a21;
+    --ink: #f7e3ec;
+    --muted: #c9a9b8;
+    --pink: #ff9dbf;
+    --soft: #5a2a40;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.6 "Nunito", ui-rounded, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+.hero { text-align: center; padding: 24px 0 8px; }
+.logo {
+  width: 96px; height: 96px; border-radius: 28px; margin: 0 auto 16px;
+  background: var(--grad); display: grid; place-items: center; font-size: 48px;
+  box-shadow: 0 12px 32px rgba(224, 69, 123, .25);
+}
+h1 { font-size: 2.4rem; margin: .2em 0; letter-spacing: -.02em; }
+h2 { font-size: 1.3rem; margin-top: 2em; }
+.tag { color: var(--pink); font-weight: 700; }
+.card {
+  background: var(--card); border-radius: 24px; padding: 20px 24px; margin: 16px 0;
+  box-shadow: 0 8px 24px rgba(224, 69, 123, .10);
+}
+ul { padding-left: 1.2em; }
+li { margin: .3em 0; }
+a { color: var(--pink); }
+.pill {
+  display: inline-block; background: var(--soft); border-radius: 999px;
+  padding: 4px 14px; margin: 4px; font-weight: 700; font-size: .9rem;
+}
+footer { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 40px; }
